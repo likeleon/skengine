@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Render", "Render\Render.vcxproj", "{8D17D0E7-CB1D-4E2A-9655-E4E02773E890}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RenderTest", "Test\RenderTest\RenderTest.vcxproj", "{08E161AC-2BD8-4FAE-B761-9BFCFC139F2D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8D17D0E7-CB1D-4E2A-9655-E4E02773E890} = {8D17D0E7-CB1D-4E2A-9655-E4E02773E890}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{7A113852-4DDA-4113-88D7-B4438945DCDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{8652F590-169E-47CA-B57A-21AEA57B0905}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextDrawing", "Sample\TextDrawing\TextDrawing.vcxproj", "{A2CD4CE0-9F88-4ABA-A07C-06DBAEDF114B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8D17D0E7-CB1D-4E2A-9655-E4E02773E890} = {8D17D0E7-CB1D-4E2A-9655-E4E02773E890}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MeshViewer", "Sample\MeshViewer\MeshViewer.vcxproj", "{55224CC0-1D38-4B82-A297-5CB38CD40C36}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8D17D0E7-CB1D-4E2A-9655-E4E02773E890} = {8D17D0E7-CB1D-4E2A-9655-E4E02773E890}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Media", "Media", "{47A96B92-4BB7-44E4-BF1E-6A1E1986A1E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{B95D3A46-6EC1-4413-B69C-0D5200B97F33}"
+	ProjectSection(SolutionItems) = preProject
+		Media\Models\cube.dae = Media\Models\cube.dae
+		Media\Models\tiger.bmp = Media\Models\tiger.bmp
+		Media\Models\tiger.x = Media\Models\tiger.x
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Textures", "Textures", "{847C313D-FB00-40A3-82C7-ED1263E67532}"
+	ProjectSection(SolutionItems) = preProject
+		Media\Textures\Default_color.dds = Media\Textures\Default_color.dds
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shaders", "Shaders", "{3597F644-FD30-4C63-B42A-ABE5B4717E70}"
+	ProjectSection(SolutionItems) = preProject
+		Media\Shaders\Lambert.fx = Media\Shaders\Lambert.fx
+		Media\Shaders\Simple.fx = Media\Shaders\Simple.fx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D17D0E7-CB1D-4E2A-9655-E4E02773E890}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8D17D0E7-CB1D-4E2A-9655-E4E02773E890}.Debug|Win32.Build.0 = Debug|Win32
+		{8D17D0E7-CB1D-4E2A-9655-E4E02773E890}.Release|Win32.ActiveCfg = Release|Win32
+		{8D17D0E7-CB1D-4E2A-9655-E4E02773E890}.Release|Win32.Build.0 = Release|Win32
+		{08E161AC-2BD8-4FAE-B761-9BFCFC139F2D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{08E161AC-2BD8-4FAE-B761-9BFCFC139F2D}.Debug|Win32.Build.0 = Debug|Win32
+		{08E161AC-2BD8-4FAE-B761-9BFCFC139F2D}.Release|Win32.ActiveCfg = Release|Win32
+		{08E161AC-2BD8-4FAE-B761-9BFCFC139F2D}.Release|Win32.Build.0 = Release|Win32
+		{A2CD4CE0-9F88-4ABA-A07C-06DBAEDF114B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A2CD4CE0-9F88-4ABA-A07C-06DBAEDF114B}.Debug|Win32.Build.0 = Debug|Win32
+		{A2CD4CE0-9F88-4ABA-A07C-06DBAEDF114B}.Release|Win32.ActiveCfg = Release|Win32
+		{A2CD4CE0-9F88-4ABA-A07C-06DBAEDF114B}.Release|Win32.Build.0 = Release|Win32
+		{55224CC0-1D38-4B82-A297-5CB38CD40C36}.Debug|Win32.ActiveCfg = Debug|Win32
+		{55224CC0-1D38-4B82-A297-5CB38CD40C36}.Debug|Win32.Build.0 = Debug|Win32
+		{55224CC0-1D38-4B82-A297-5CB38CD40C36}.Release|Win32.ActiveCfg = Release|Win32
+		{55224CC0-1D38-4B82-A297-5CB38CD40C36}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{08E161AC-2BD8-4FAE-B761-9BFCFC139F2D} = {7A113852-4DDA-4113-88D7-B4438945DCDB}
+		{A2CD4CE0-9F88-4ABA-A07C-06DBAEDF114B} = {8652F590-169E-47CA-B57A-21AEA57B0905}
+		{55224CC0-1D38-4B82-A297-5CB38CD40C36} = {8652F590-169E-47CA-B57A-21AEA57B0905}
+		{B95D3A46-6EC1-4413-B69C-0D5200B97F33} = {47A96B92-4BB7-44E4-BF1E-6A1E1986A1E1}
+		{847C313D-FB00-40A3-82C7-ED1263E67532} = {47A96B92-4BB7-44E4-BF1E-6A1E1986A1E1}
+		{3597F644-FD30-4C63-B42A-ABE5B4717E70} = {47A96B92-4BB7-44E4-BF1E-6A1E1986A1E1}
+	EndGlobalSection
+EndGlobal

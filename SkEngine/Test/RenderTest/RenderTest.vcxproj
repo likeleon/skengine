@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{08E161AC-2BD8-4FAE-B761-9BFCFC139F2D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RenderTest</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\External\gtest-1.5.0\Inc;..\..\Render\Inc;..\..\..\External\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PrecompiledHeaderFile>Pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\External\gtest-1.5.0\Bin\$(ConfigurationName)\gtest-md;..\..\..\External\gtest-1.5.0\Bin\$(ConfigurationName)\gtest_main-md;$(OutDir);..\..\..\External\Microsoft DirectX SDK (June 2010)\Lib\x86;..\..\..\External\Collada DOM 2.2\Bin\1.4\$(ConfigurationName);..\..\..\External\Collada DOM 2.2\external-libs\boost\lib\vc10;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Render.lib;gtestd.lib;d3d9.lib;d3dx9d.lib;dxerr.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\External\gtest-1.5.0\Inc;..\..\Render\Inc;..\..\..\External\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PrecompiledHeaderFile>Pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\External\gtest-1.5.0\Bin\$(ConfigurationName)\gtest-md;..\..\..\External\gtest-1.5.0\Bin\$(ConfigurationName)\gtest_main-md;$(OutDir);..\..\..\External\Microsoft DirectX SDK (June 2010)\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Render.lib;gtest.lib;d3d9.lib;d3dx9.lib;dxerr.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CameraTest.cpp" />
+    <ClCompile Include="ColorTest.cpp" />
+    <ClCompile Include="D3DMappingTest.cpp" />
+    <ClCompile Include="D3D9DeviceTest.cpp" />
+    <ClCompile Include="IndexBufferTest.cpp" />
+    <ClCompile Include="IntrusivePtrTest.cpp" />
+    <ClCompile Include="MathTest.cpp" />
+    <ClCompile Include="MeshTest.cpp" />
+    <ClCompile Include="MeshVertexTest.cpp" />
+    <ClCompile Include="RadianTest.cpp" />
+    <ClCompile Include="D3DEffectTest.cpp" />
+    <ClCompile Include="ShaderManagerTest.cpp" />
+    <ClCompile Include="TextureManagerTest.cpp" />
+    <ClCompile Include="TextureTest.cpp" />
+    <ClCompile Include="UtilitiesTest.cpp" />
+    <ClCompile Include="Vector4Test.cpp" />
+    <ClCompile Include="FrameworkTest.cpp" />
+    <ClCompile Include="LambertShaderTest.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ManualRenderableTest.cpp" />
+    <ClCompile Include="Matrix4Test.cpp" />
+    <ClCompile Include="Pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="RendererTest.cpp" />
+    <ClCompile Include="ShaderBaseTest.cpp" />
+    <ClCompile Include="StringUtilTest.cpp" />
+    <ClCompile Include="TextBoxTest.cpp" />
+    <ClCompile Include="Vector2Test.cpp" />
+    <ClCompile Include="Vector3Test.cpp" />
+    <ClCompile Include="VertexBufferTest.cpp" />
+    <ClCompile Include="VertexDeclarationTest.cpp" />
+    <ClCompile Include="WindowTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CommonFixtures.h" />
+    <ClInclude Include="MockClasses.h" />
+    <ClInclude Include="Pch.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
